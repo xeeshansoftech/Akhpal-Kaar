@@ -1,0 +1,179 @@
+
+[InstallShield Wizard]
+iDate=0
+iTime=0
+Flag=fe000000
+ISX.EXE Size=657920
+ISX.EXE Date=11:03:16AM  11/14/1998
+ISX.EXE Ver=2.1.1.3
+SETUP.EXE Size=45312
+SETUP.EXE Date=3:21:02PM  10/1/1998
+SETUP.EXE Ver=3.0.111.0
+SETUP.INS Size=70547
+SETUP.INS Date=4:49:22PM  11/12/1998
+SETUP.INS Ver=Not available
+_INST16.EX_ Size=282766
+_INST16.EX_ Date=3:20:56PM  10/1/1998
+_INST16.EX_ Ver=Not available
+_INST32I.EX_ Size=320411
+_INST32I.EX_ Date=3:20:56PM  10/1/1998
+_INST32I.EX_ Ver=Not available
+ISDEPEND.INI Size=320411
+ISDEPEND.INI Date=3:20:56PM  10/1/1998
+ISDEPEND.INI Ver=Not available
+SWDEPEND.INI Size=320411
+SWDEPEND.INI Date=3:20:56PM  10/1/1998
+SWDEPEND.INI Ver=Not available
+ICOMP.EXE Size=119808
+ICOMP.EXE Date=3:21:00PM  10/1/1998
+ICOMP.EXE Ver=3.00.062
+SPLIT.EXE Size=90624
+SPLIT.EXE Date=3:21:02PM  10/1/1998
+SPLIT.EXE Ver=3.00.060
+PACKLIST.EXE Size=87552
+PACKLIST.EXE Date=3:21:00PM  10/1/1998
+PACKLIST.EXE Ver=3.00.060
+Version=2.11
+DevTool=Generic Windows
+Platform=Win32
+DisksDir=forex\650MB\
+TabsVisit=111100111000000110001
+LangNum=451
+LangDir=LANG\ENG\
+
+[VisualDesign]
+AppName=BackConnect
+AppExe=[Program Files]\ifrun60.EXE
+AppExeFile=
+Version=1.0.0
+Company=Softech Systems Pvt. Ltd.
+Title=BackConnect 1.0.0
+TitleType=1
+BackgrndBmp=
+BackgrndAlign=4
+Backgrnd=1
+BackgrndColor=0
+Uninstall=1
+Silent=1
+SmsMode=0
+
+[Types]
+Types=1
+Type1Components=1
+Type1Name=Complete
+Type1ComponentList=1 
+
+[Components]
+Components=1
+Component1Groups=2
+Component1Name=Application Files
+Component1Description=Application files needed to run the application
+Component1GroupList=1 2 
+
+[Groups]
+Groups=2
+Group1Size=361520
+Group1Files=5
+Group1Name=forms-forex
+Group1Dir=<INSTALLDIR>
+Group1Update=2
+Group1TargetOS=-1
+Group1File1=C:\KASB\BackConnect\Application\forms\Forex\FOREX_SETTLEMENT_BANK.fmx
+Group1File2=C:\KASB\BackConnect\Application\forms\Forex\FOREX_BILLING.fmx
+Group1File3=C:\KASB\BackConnect\Application\forms\Forex\FOREX_CONTRACT.fmx
+Group1File4=C:\KASB\BackConnect\Application\forms\Forex\FOREX_PARAMETER_FORM.fmx
+Group1File5=C:\KASB\BackConnect\Application\forms\Forex\FOREX_BILL_CANCELLATION.fmx
+Group2Size=1900544
+Group2Files=10
+Group2Name=reports-forex
+Group2Dir=<INSTALLDIR>
+Group2Update=2
+Group2TargetOS=-1
+Group2File1=C:\KASB\BackConnect\Application\reports\forex\Bill_detail..rdf
+Group2File2=C:\KASB\BackConnect\Application\reports\forex\Clt_List.rdf
+Group2File3=C:\KASB\BackConnect\Application\reports\forex\DActivity(takenup).rdf
+Group2File4=C:\KASB\BackConnect\Application\reports\forex\DActivity.rdf
+Group2File5=C:\KASB\BackConnect\Application\reports\forex\F_bill_summury.rdf
+Group2File6=C:\KASB\BackConnect\Application\reports\forex\F_contract.rdf
+Group2File7=C:\KASB\BackConnect\Application\reports\forex\Holidays.rdf
+Group2File8=C:\KASB\BackConnect\Application\reports\forex\periodic_cancel.rdf
+Group2File9=C:\KASB\BackConnect\Application\reports\forex\Periodic_cont_list.rdf
+Group2File10=C:\KASB\BackConnect\Application\reports\forex\periodic_maturityWise.rdf
+
+[Sequence]
+DestinationLocationDir=<ProgramFilesDir>\BackConnect
+SelectProgramFolderName=BackConnect 1.0.0
+WelcomeMessage=1
+WelcomeMessageFile=
+UserInformation=1
+UserInformationType=1
+DestinationLocation=1
+SelectProgramFolder=1
+ProgressBar=1
+
+[RegEntries]
+Reg1Path=HKEY_CLASSES_ROOT
+Reg1Val1Type=0
+Reg1Val1Name=(Default)
+Reg1Val1Data=(value not set)
+Reg1Vals=1
+Reg2Path=HKEY_CURRENT_USER
+Reg2Val1Type=0
+Reg2Val1Name=(Default)
+Reg2Val1Data=(value not set)
+Reg2Vals=1
+Reg3Path=HKEY_LOCAL_MACHINE
+Reg3Val1Type=0
+Reg3Val1Name=(Default)
+Reg3Val1Data=(value not set)
+Reg3Vals=1
+Reg4Path=HKEY_USERS
+Reg4Val1Type=0
+Reg4Val1Name=(Default)
+Reg4Val1Data=(value not set)
+Reg4Vals=1
+Reg5Path=HKEY_CURRENT_CONFIG
+Reg5Val1Type=0
+Reg5Val1Name=(Default)
+Reg5Val1Data=(value not set)
+Reg5Vals=1
+Reg6Path=HKEY_DYN_DATA
+Reg6Val1Type=0
+Reg6Val1Name=(Default)
+Reg6Val1Data=(value not set)
+Reg6Vals=1
+Regs=6
+
+[Registry]
+
+[Icons]
+Icons=1
+Icon1Param=Module=Main_Form.fmx userid=scott/tiger@demo window_state=MAXIMIZE
+Icon1Cmd=[Program Files]\ifrun60.EXE
+Icon1Description=BackConnect
+Icon1WorkingDir=<INSTALLDIR>
+Icon1IconFile=[Resources]\Softech_logo.ico
+Icon1RealFile=C:\KASB\BACKCONNECT\APPLICATION\resources\Softech_logo.ico
+Icon1WhichIcon=0
+Icon1KeyVirtual=0
+Icon1KeyFlags=0
+Icon1StartMenu=0
+Icon1Window=1
+
+[VisualBasic]
+PRJFile=C:\KASB\BackConnect\Application\Setup\Launch\ifrun60.VBP
+
+[Disk1 Files]
+AutoRun=1
+
+[Autoexec]
+PathDir=
+ShareLocks=
+ShareFiles=
+Command=
+
+[CopyToFloppy]
+DriveOption=
+DestinationPath=
+DestinationPathOneFile=
+Password=

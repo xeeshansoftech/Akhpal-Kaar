@@ -1,0 +1,44 @@
+==========================
+----EXTERNAL CHARGES------
+==========================
+--Application Menu Path
+--------------------------
+Definitions > Equity > External Charges Creation
+Definitions > Equity > CDC Client Group 
+Transations > Equity > External Charges Mapping
+Transations > Equity > External Charges Execution
+Reports > Equity > Charges Detail > Clearing Wise Charges Detail
+Reports > Equity > Charges Detail > Client Wise Charges Detail
+
+--------------
+--FORMS
+--------------
+EXTERNAL_CHARGES.fmb
+Cdc_Client_Group.fmb
+EXTERNAL_CHARGES_MAPPING.fmb
+EXTERNAL_CHARGES_EXECUTION.fmb
+Levies_Charges_Param_Form.fmb
+Levies_Charges_Param_Form_Client.fmb
+Parameter_Form.fmb (Get from Equity Node from VSS)
+
+-------------
+--REPORTS
+-------------
+Levies_Schedule.rdf
+Levies_Schedule_Client.rdf
+Levies_Schedule_Trade_Wise.rdf
+Ex_Client_Periodic_Det_WITH_CFS_RATE.rdf
+Ext_Client_Perd_clb_Det.rdf
+Ext_Client_Periodic_Det.rdf  
+Ext_Client_Periodic_Det_Ratewise.rdf
+Ext_Client_Periodic_Det_Ratewise_S.rdf
+Ext_Client_Periodic_Det_S.rdf
+Ext_Client_Periodic_Det_Tdr_Wis_S.rdf
+Ext_Client_Periodic_Det_Trader_Wise.rdf
+Ext_Client_Periodic_Summary.rdf
+Ext_Client_Prd_Avg_Rat_Smry.rdf  
+
+
+
+
+

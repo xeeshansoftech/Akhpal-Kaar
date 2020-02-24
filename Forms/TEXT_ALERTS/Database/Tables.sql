@@ -1,0 +1,91 @@
+-- ====================================
+-- TEXT ALERTS TEMPLATE
+-- ====================================
+DROP TABLE TEXT_ALERTS_TEMPLATE;
+CREATE TABLE TEXT_ALERTS_TEMPLATE(
+alert_id     VARCHAR2(5),
+alert_desc   VARCHAR2(50),
+alert_body   VARCHAR2(1500),
+alert_active NUMBER(1) DEFAULT 1, 
+POST         NUMBER(1) DEFAULT 0,
+LOG_ID       NUMBER(12)
+);
+ALTER TABLE TEXT_ALERTS_TEMPLATE ADD CONSTRAINT PK_TEXT_ALERTS PRIMARY KEY (ALERT_ID)
+/
+-- ====================================
+-- TEXT ALERTS TEMPLATES
+-- ====================================
+INSERT INTO TEXT_ALERTS_TEMPLATE(ALERT_ID, ALERT_DESC, ALERT_BODY, ALERT_ACTIVE, POST, LOG_ID)
+VALUES('CLTOP', 'CLIENT OPENED', 'Your client account P1 has been successfully opened at Softech Systems (Pvt) Ltd.', 1, 1, 0)
+/
+INSERT INTO TEXT_ALERTS_TEMPLATE(ALERT_ID, ALERT_DESC, ALERT_BODY, ALERT_ACTIVE, POST, LOG_ID)
+VALUES('CLTCL', 'CLIENT CLOSED', 'Your client account P1 has been closed at Softech Systems (Pvt) Ltd.', 1, 1, 0)
+/
+INSERT INTO TEXT_ALERTS_TEMPLATE(ALERT_ID, ALERT_DESC, ALERT_BODY, ALERT_ACTIVE, POST, LOG_ID)
+VALUES('CLTBD', 'CLIENT BIRTHDAY', 'We, at Softech Systems (Pvt) Ltd, wish you a very Happy Birthday.', 1, 1, 0)
+/
+INSERT INTO TEXT_ALERTS_TEMPLATE(ALERT_ID, ALERT_DESC, ALERT_BODY, ALERT_ACTIVE, POST, LOG_ID)
+VALUES('GJV', 'GJV', 'Your account (P1) has been P2 with P3 amount.', 1, 1, 0)
+/
+INSERT INTO TEXT_ALERTS_TEMPLATE(ALERT_ID, ALERT_DESC, ALERT_BODY, ALERT_ACTIVE, POST, LOG_ID)
+VALUES('GBP', 'GBP', 'Your account (P1) has been P2 with P3 amount.', 1, 1, 0)
+/
+INSERT INTO TEXT_ALERTS_TEMPLATE(ALERT_ID, ALERT_DESC, ALERT_BODY, ALERT_ACTIVE, POST, LOG_ID)
+VALUES('GBR', 'GBR', 'Your account (P1) has been P2 with P3 amount.', 1, 1, 0)
+/
+INSERT INTO TEXT_ALERTS_TEMPLATE(ALERT_ID, ALERT_DESC, ALERT_BODY, ALERT_ACTIVE, POST, LOG_ID)
+VALUES('GCP', 'GCP', 'Your account (P1) has been P2 with P3 amount.', 1, 1, 0)
+/
+INSERT INTO TEXT_ALERTS_TEMPLATE(ALERT_ID, ALERT_DESC, ALERT_BODY, ALERT_ACTIVE, POST, LOG_ID)
+VALUES('GCR', 'GCR', 'Your account (P1) has been P2 with P3 amount.', 1, 1, 0)
+/
+INSERT INTO TEXT_ALERTS_TEMPLATE(ALERT_ID, ALERT_DESC, ALERT_BODY, ALERT_ACTIVE, POST, LOG_ID)
+VALUES('CGT', 'CGT', 'Your account (P1) has been P2 with P3 amount for CGT.', 1, 1, 0)
+/
+INSERT INTO TEXT_ALERTS_TEMPLATE(ALERT_ID, ALERT_DESC, ALERT_BODY, ALERT_ACTIVE, POST, LOG_ID)
+VALUES('TRD', 'TRADES', NULL, 1, 1, 0)
+/
+-- ====================================
+-- TEXT ALERTS 
+-- ====================================
+DROP TABLE TEXT_ALERTS_LOG;
+create table TEXT_ALERTS_LOG
+(
+  TEXT_ID           NUMBER(12) not null,
+  TEXT_SENDER       VARCHAR2(50),
+  TEXT_RECIEVER     VARCHAR2(50),
+  TEXT_BODY         VARCHAR2(1500),
+  ALERT_ID          VARCHAR2(5),
+  CLIENT_CODE       VARCHAR2(100),
+  TIME_INSERT       DATE,
+  TIME_SENT         DATE,
+  TEXT_STATUS       CHAR(1) DEFAULT 'P',
+  TRADE_TYPE        NUMBER(1) DEFAULT 0,
+  SYMBOL            VARCHAR2(12),
+  ORDER_NUMBER      NUMBER(12),
+  REMARKS           VARCHAR2(500),
+  LOG_ID            NUMBER(12) DEFAULT 0,
+  POST              NUMBER(1) DEFAULT 0
+);
+-- Create/Recreate primary, unique and foreign key constraints 
+ALTER TABLE TEXT_ALERTS_LOG ADD CONSTRAINT TEXT_ID PRIMARY KEY (TEXT_ID)
+/
+ALTER TABLE TEXT_ALERTS_LOG ADD CONSTRAINT FK_TEXT_TEMPLATE FOREIGN KEY (ALERT_ID)
+  REFERENCES TEXT_ALERTS_TEMPLATE (ALERT_ID);
+ALTER TABLE TEXT_ALERTS_LOG ADD CONSTRAINT CHK_TEXT_STATUS CHECK(TEXT_STATUS IN ('P', 'S', 'F'))
+/
+-- Temp Table (For Import Karachi File)...
+create table TEMP_SMS_CONFIRMATION
+(
+  TRADE_NUMBER NUMBER(12) not null,
+  TRADE_DATE   DATE,
+  CLIENT_CODE  VARCHAR2(100),
+  BUY_OR_SELL  VARCHAR2(10),
+  SYMBOL       VARCHAR2(25),
+  RATE         NUMBER(12,4),
+  VOLUME       NUMBER(9),
+  PHONE        VARCHAR2(15)
+);
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table TEMP_SMS_CONFIRMATION add primary key (TRADE_NUMBER)
+/

@@ -1,0 +1,8 @@
+MSG|Tue Jan 26 11:41:11 GMT+05:00 2010|SENDING|0001|Sending Mail To:ahmed@softech.com.pk;0001;AHMED;417-Kamran;ahmed@softech.com.pk;ahmed@softech.com.pk|*
+MSG|Tue Jan 26 11:41:33 GMT+05:00 2010|NOT SENT|Exception reading response;
+  nested exception is:
+	java.net.SocketException: Connection reset|*
+MSG|Tue Jan 26 11:41:47 GMT+05:00 2010|SENDING|0001|Sending Mail To:ahmed@softech.com.pk;0001;AHMED;417-Kamran;ahmed@softech.com.pk;ahmed@softech.com.pk|*
+MSG|Tue Jan 26 11:41:56 GMT+05:00 2010|SENT|0001|Mail Sent Successfully to: 0001|*
+MSG|Wed Jan 27 10:41:29 GMT+05:00 2010|SENDING|0001|Sending Mail To:ahmed@softech.com.pk;0001;AHMED;417-Kamran;ahmed@softech.com.pk;ahmed@softech.com.pk|*
+MSG|Wed Jan 27 10:41:32 GMT+05:00 2010|SENT|0001|Mail Sent Successfully to: 0001|*

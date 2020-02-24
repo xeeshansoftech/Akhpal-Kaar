@@ -1,0 +1,10 @@
+0  smtp server
+1  smtp port
+2  userId
+3  password
+4  senderAddress
+5  client Info ( To|ClientCode|ClientName|Address|cc;cc;cc... )
+6  subject
+7  message
+8  AttachmentFilePath
+9  LogFileName
